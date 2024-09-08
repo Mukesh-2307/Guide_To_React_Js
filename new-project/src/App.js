@@ -1,10 +1,12 @@
 // import logo from './logo.svg';
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import ClassComponent from "./components/ClassComponent";
 import FunctionBasedComponents from "./components/FunctionBasedComponents";
 
 function App() {
+  const author = "mk";
+  const [name, setName] = useState("MKD");
   return (
     <>
       <div className="App">
@@ -12,7 +14,8 @@ function App() {
         <ClassComponent/>
 
         <p>functional components</p>
-        <FunctionBasedComponents/>
+        {/* <FunctionBasedComponents name="Mukesh" age={22} author={author}/> */}
+        <FunctionBasedComponents name={name} age={22} author={author} setName={setName}/>
       </div>
     </>
   );
